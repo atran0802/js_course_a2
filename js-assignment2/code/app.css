@@ -73,8 +73,8 @@ header a {
     text-decoration: none;
 }
 
-
-.fas {
+.hamburger i {
+    display: none;
     color: #fff;
 }
 
@@ -132,8 +132,8 @@ footer {
 MEDIA QUERIES
 - - - - - - - - - - - - - - - - - - - - - - - - */
 @media (max-width: 600px) {
-  header ul {
-    display: block;
+  .nav-menu ul {
+    display: none;
 
     height: 100vh;
     width: 50%;
@@ -143,4 +143,10 @@ MEDIA QUERIES
     transition: 0.2s;
   }
 
+  .hamburger .fas {
+    float: right;
+    display: block;
+
+    cursor: pointer;
+  }
 }
