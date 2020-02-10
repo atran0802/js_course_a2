@@ -155,11 +155,13 @@ MEDIA QUERIES
     bottom: 0;
 
     background: #222;
+
+    transform: translateX(100%);
     transition: 0.2s;
   }
   
   .nav-menu li {
-    margin: 1em;
+    margin: 1.5em;
   }
 
   .hamburger {
@@ -168,11 +170,11 @@ MEDIA QUERIES
   }
 
   .nav-open {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
     
   .nav-close .line1 {
-    transform: rotate(45deg) translate(5px, 6px);
+    transform: rotate(45deg) translate(5px, -25px);
   }
 
   .nav-close .line2 {
@@ -180,6 +182,6 @@ MEDIA QUERIES
   }
 
   .nav-close .line3 {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(30px, -1px);
   }
 }
