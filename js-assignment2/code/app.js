@@ -1,11 +1,11 @@
-const open = document.querySelector('.fas fa-bars')
-const closed = document.querySelector('.fas fa-times')
-const toggle = document.querySelector('.hamburger')
+const navSlide = () => {
+  const closed = document.querySelector('.hamburger')
+  const nav = document.querySelector('.nav-menu')
 
-open.addEventListener('click', function() {
-  toggle.className = 'open hamburger'
-})
+  closed.addEventListener('click', () => {
+    nav.classList.toggle('nav-open')
+    closed.classList.toggle('nav-close')
+  })
+}
 
-closed.addEventListener('click', function() {
-  toggle.className = 'close hamburger'
-})
+navSlide()
