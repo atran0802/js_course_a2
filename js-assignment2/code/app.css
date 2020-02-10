@@ -73,9 +73,17 @@ header a {
     text-decoration: none;
 }
 
-.hamburger i {
+.hamburger {
     display: none;
-    color: #fff;
+    cursor: pointer;
+}
+
+.hamburger div {
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+
+    background: #fff;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -120,6 +128,10 @@ MAIN CONTENT
     line-height: 1.6;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - 
 FOOTER
 - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -132,21 +144,42 @@ footer {
 MEDIA QUERIES
 - - - - - - - - - - - - - - - - - - - - - - - - */
 @media (max-width: 600px) {
-  .nav-menu ul {
-    display: none;
-
-    height: 100vh;
-    width: 50%;
-
-    background: #222;
-
-    transition: 0.2s;
-  }
-
-  .hamburger .fas {
-    float: right;
+  .nav-menu {
     display: block;
 
-    cursor: pointer;
+    height: 100%;
+    width: 50%;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    background: #222;
+    transition: 0.2s;
+  }
+  
+  .nav-menu li {
+    margin: 1em;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1;
+  }
+
+  .nav-open {
+    transform: translateX(100%);
+  }
+    
+  .nav-close .line1 {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .nav-close .line2 {
+    display: none;
+  }
+
+  .nav-close .line3 {
+    transform: rotate(-45deg);
   }
 }
